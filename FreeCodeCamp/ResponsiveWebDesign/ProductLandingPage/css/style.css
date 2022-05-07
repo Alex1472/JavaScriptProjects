@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#header-img {
+    max-width: 300px;
+    width: 100%;    
+    height:fit-content;
+}
+.logo-container {
+    width: 60vw;
+}
+#header {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+    background-color: #eee;
+}
+nav {
+    width: 35vw;
+}
+ul {
+    list-style-type: none;
+}
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.95rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media (max-width: 650px) {
+    nav > ul {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    #header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+li {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+@media (max-width: 650px) {
+    nav li {
+        padding-bottom: 5px;
+    }
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+.hero {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 650px) {
+    .hero {
+        margin-top: 150px;
+    }
+}
+#email {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 15rem;
+    padding: 4px 2px;
+}
+#submit {
+    text-transform: uppercase;
+    background-color: #f1c40f;
+    padding: 4px 8px 4px 16px;
+    border-width: 0;
+    font-size: 1rem;
+    margin: 0.7rem auto;
+}
+#submit:hover {
+    background-color: orange;
+    transition: background-color 1s;
+}
+#form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 10vw 60vw;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 60px;
+    grid-column-gap: 70px;
+    align-items: center;
+    width: fit-content;
+    margin: 60px auto;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkorange;
+}
+@media (max-width: 650px) {
+    .icon {
+        display: none;
+    }
+    .grid {
+        grid-template-columns: 70vw;
+    }
+}
+.product-name {
+    margin: 0 0;
+    font-weight: 600;
+}
+#how-it-works {
+    display: flex;
+    justify-content: center;
+}
+#pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4rem 0 2rem 0;
+}
+@media (max-width: 800px) {
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+    border: black solid 1px;
+    margin: 0 10px;
+}
+@media (max-width: 800px) {
+    .price-item {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+.price-item-header {
+    background-color: #ddd;
+    text-transform: uppercase;
+    align-self: stretch;
+    text-align: center;
+    padding: 15px 0;
+}
+.price-item-price {
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.price-item-p {
+    margin: 5px 0px;
+}
+.price-item-button {
+    margin: 25px 0px 15px 0px;
+    text-transform: uppercase;
+    background-color: #f1c40f;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-width: 0px;
+}
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    background-color: #ddd;
+    margin: 0px auto;
+}
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+.footer-item {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+#copyright {
+    font-size: 0.9rem;
+}
