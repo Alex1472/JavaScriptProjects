@@ -1,0 +1,67 @@
+@import './resets';
+@import './variables';
+
+@function get-weight($text-weight) {
+    @return map-get($text-weights, $text-weight);
+}
+
+@mixin display-flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin theme($light) {
+    @if $light {
+        background-color: $light-theme-primary-color;
+        color: $light-theme-text-color;
+    } @else {
+        background-color: $dark-theme-primary-color;
+        color: $dark-theme-text-color;
+    }
+}
+
+
+@for $i from 1 to 6 {
+    .text-#{$i} { font-size: $i * 15px }
+}
+
+@each $color in blue, black, red {
+    .#{$color}-bg { background-color: $color; }
+}
+
+$i: 1;
+@while $i < 6 {
+  .text-#{$i} { font-size: 15px * $i; }
+  $i: $i + 1;
+}
+
+.info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.info-important {
+    @extend .info;
+    background-color: magenta;
+}
+
+
+body {
+    @include theme(false);
+    font-weight: get-weight(medium);
+}
+
+// .main {
+//     @include display-flex(row);
+//     width: 80%;
+//     margin: 0 auto;
+    
+//     p {
+//         font-weight: map-get($text-weights, bold);
+//         &:hover {
+//             color: pink;
+//         }
+//     }
+// }
