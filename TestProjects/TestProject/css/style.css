@@ -1,0 +1,21 @@
+body {
+    background-color: yellow;
+}
+.innerItem1 {
+    position: sticky;
+    top: 30px;
+    left: 30px;
+    background-color: red;
+    width: 100px;
+    height: 270px;
+}
+.innerItem2 {
+    background-color: blue;
+    width: 100px;
+    height: 500px;
+}
+.innerItem3 {
+    background-color: green;
+    width: 100px;
+    height: 500px;
+}
