@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "test node.js project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -15,6 +16,9 @@
   "author": "Alexander Petrovskiy",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "github:twbs/bootstrap",
+    "lodash": "^4.17.21",
+    "twbs": "^0.0.6",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

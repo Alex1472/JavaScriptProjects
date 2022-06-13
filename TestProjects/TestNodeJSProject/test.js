@@ -1,1 +1,0 @@
-module.exports = { name: "Alex", age: 25, hello: function() { console.log("Hello"); } };
