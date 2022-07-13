@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FaFaFa;
+}
+.container {
+    margin-top: 40px;
+}
+h2 {
+    margin-top: 30px;
+}
+a {
+    color: #2574A9;
+}
+code {
+    background-color: white;
+    font-family: monospace;
+}
+footer {
+    margin-top: 40px;
+}
