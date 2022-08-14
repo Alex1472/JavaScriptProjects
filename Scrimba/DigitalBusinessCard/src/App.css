@@ -1,0 +1,105 @@
+.outer-container {
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+.inner-container {
+  width: 318px;
+  border-radius: 10px;
+  margin: 50px 0px;
+  background-color: #1A1B21;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 318px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-name {
+  color: #FFFFFF;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.info-profession {
+  color: #F3BF99;
+  font-size: 13px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+
+.info-website {
+  font-size: 10.24px;
+  color: #F5F5F5;
+}
+
+.info-button-container {
+  margin: 20px 30px 20px 30px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 115px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+}
+
+.email-button {
+  background-color: #F5F5F5;
+}
+
+.button-image {
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.linked-in-button {
+  background-color: #5093E2;
+  color: white;
+}
+
+
+
+.content-container {
+  margin: 15px 30px 45px 30px;
+}
+
+.section-header {
+  color: #F5F5F5;
+  font-size: 16px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.section-text {
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #DCDCDC;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: #161619;
+  padding: 18px 0px;
+}
+.footer-img {
+  margin: 0px 15px 0px 15px;
+}
+
+
+
+
+
+
