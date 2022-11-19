@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import data from "../data";
 import Question from "./Question";
 
 export default function Quiz(props) {
@@ -7,12 +6,31 @@ export default function Quiz(props) {
     let [questionsInfo, setQuestionInfo] = useState(null);
 
     useEffect(() => {
-        setQuestionInfo(
-            data.map((questionInfo) => ({
-                ...questionInfo,
-                selectedAnswer: "",
-            }))
-        );
+        fetch("https://opentdb.com/api.php?amount=5")
+            .then((res) => res.json())
+            .then((data) => {
+                function correctText(text) {
+                    return text
+                        .replaceAll("&quot;", '"')
+                        .replaceAll("&#039;", "'");
+                }
+
+                let questionInfos = [];
+                for (let info of data.results) {
+                    let correctAnswerIndex = Math.floor(4 * Math.random());
+                    let answers = [...info.incorrect_answers];
+                    answers.splice(correctAnswerIndex, 0, info.correct_answer);
+                    answers.map((answer) => correctText(answer));
+
+                    questionInfos.push({
+                        text: correctText(info.question),
+                        answers: answers,
+                        selected_answer: "",
+                        rightAnswer: correctText(info.correct_answer),
+                    });
+                }
+                setQuestionInfo(questionInfos);
+            });
     }, []);
 
     function showAnswers() {
